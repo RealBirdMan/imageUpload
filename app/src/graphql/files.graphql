@@ -1,0 +1,12 @@
+mutation Upload($url: String!, $bytes: String!, $format: String!) {
+  createFile(input: { url: $url, bytes: $bytes, format: $format })
+}
+
+query files {
+  files {
+    id
+    url
+    bytes
+    format
+  }
+}
